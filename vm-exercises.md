@@ -9,69 +9,71 @@
 
 #### Dataset
 
-- [ ] Add datasets used to the `datasets/` folder
+- [x] Add datasets used to the `datasets/` folder
 
 #### Files
 
-- [ ] **Initial**: Add file to the `exercises/`  folder with the name `ex-1-intial.twbx` or `ex-1-intial.pbix`, depending if you are auditioning for a Tableau or Power BI course.
-- [ ] **Solution**: Add file to the `exercises/`  folder with the name `ex-1-sol.twbx` or `ex-1-sol.pbix`
+- [x] **Initial**: Add file to the `exercises/`  folder with the name `ex-1-intial.twbx` or `ex-1-intial.pbix`, depending if you are auditioning for a Tableau or Power BI course.
+- [x] **Solution**: Add file to the `exercises/`  folder with the name `ex-1-sol.twbx` or `ex-1-sol.pbix`
 
 #### Learning Objective
 
-*One measurable learning objective that this exercise assesses*
+*Split a column into multiple columns.*
 
 #### Context
 
-*3 - 4 sentence description of why it’s important to learn how to do this task (linking back to the learning objective). Explain how this would be used in a real-life situation. Why is it useful, what problem does it solve?*
+*Text often has delimiters, which are useful for splitting apart different parts of the text. For instance, addresses are often stored with commas between their different parts (e.g., street address, city, state, and zip). You can leverage the comma delimiter as a splitting point to separate the different parts into different columns. This makes the data more suitable for structured forms like in relational databases.*
 
 #### Steps to be executed by the student (max 6)
 
 *Each bulleted instruction is a complete sentence that describes a specific task.*
 
-- Step 1
-- Step 2
-- Step 3
-- ...
+- Load `ex-1-initial.csv` into Power Query.
+- Highlight the `FULL ADDRESS` column.
+- In the *Home* ribbon, select *Split Column >> By Delimiter*.
+- In the *Select or enter delimiter* pull-down, select *Comma*. For the *Split at* option, select *Each occurrence of the delimiter*. Click OK.
+- Rename the four new columns as `STREET`, `CITY`, `STATE`, and `ZIP`.
+- Click *Home >> Close & Load* to import the data into Excel. You should see a new worksheet containing the new data.
 
 #### Exercise question:
-*This is a question presented to learners to check if the steps above were properly completed. It can be a multiple choice question or a question with a 1-3 word answer. It is often not possible to check if all the steps are completed, in this case; the priority is to check that the learner meets the learning objective.*
+*If you sort the ZIP column from smallest to largest, what is the first zip code?*
 
 #### End goal:
 
-*Add an image of the final visualization here.*
+![](./2.2-ex1-solution-image.png)
 
 ## 2nd VM Exercise
 
 #### Dataset
 
-- [ ] Add datasets used to the `datasets/` folder
+- [x] Add datasets used to the `datasets/` folder
 
 #### Files
 
-- [ ] **Initial**: Add file to the `exercises/`  folder with the name `ex-2-intial.twbx` or `ex-2-intial.pbix`, depending if you are auditioning for a Tableau or Power BI course.
-- [ ] **Solution**: Add file to the `exercises/`  folder with the name `ex-2-sol.twbx` or `ex-2-sol.pbix`
+- [x] **Initial**: Add file to the `exercises/`  folder with the name `ex-2-intial.twbx` or `ex-2-intial.pbix`, depending if you are auditioning for a Tableau or Power BI course.
+- [x] **Solution**: Add file to the `exercises/`  folder with the name `ex-2-sol.twbx` or `ex-2-sol.pbix`
 
 #### Learning Objective
 
-*One measurable learning objective that this exercise assesses*
+*Create a new custom column using a formula.*
 
 #### Context
 
-*3 - 4 sentence description of why it’s important to learn how to do this task (linking back to the learning objective). Explain how this would be used in a real-life situation. Why is it useful, what problem does it solve?*
+*Thoughtfully adding new columns enriches your data set with more information. This can result in better visualizations and models. In this exercise, you will create a new custom column to identify insurance customers that fall in the middle class and low risk categories.*
 
 #### Steps to be executed by the student (max 6)
 
 *Each bulleted instruction is a complete sentence that describes a specific task.*
 
-- Step 1
-- Step 2
-- Step 3
-- ...
+- Load `ex-2-initial.csv` into Power Query.
+- On the *Add Column* ribbon, click `Custom Column`.
+- Name the column `MIDDLE_LOW`.
+- Enter the formula that results in TRUE if SOCIAL_CLASS is middle class and RISK_SEGMENTATION is low. Click OK.
+- Click Home >> Close & Load to import the data into Excel. You should see a new worksheet containing the new data.
 
 #### Exercise question:
-*This is a question presented to learners to check if the steps above were properly completed. It can be a multiple choice question or a question with a 1-3 word answer. It is often not possible to check if all the steps are completed, in this case; the priority is to check that the learner meets the learning objective.*
+*Use Excel's COUNTIF function to count the true values in MIDDLE_LOW. How many customers fall in the middle class and low risk categories?*
 
 #### End goal:
 
-*Add an image of the final visualization here.*
-
+![](./2.2-ex2-solution-image.png)
